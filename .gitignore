@@ -1,0 +1,14 @@
+# OS junk
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+
+# Packaged builds (attach to GitHub Releases instead)
+*.zip
+*.crx
+*.pem
+node_modules/

@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Inputread Gamepad Reader",
+  "version": "1.11.1",
+  "description": "Use a gamepad to control inputread read-aloud, word images and page scrolling.",
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "Inputread 手柄控制",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://inputread.site/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://www.google.com/search*",
+        "https://www.google.com/imgres*",
+        "https://www.google.com.hk/search*",
+        "https://www.google.com.hk/imgres*",
+        "https://www.bing.com/images/*"
+      ],
+      "js": ["images.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

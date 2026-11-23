@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inputread 手柄控制</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="panel">
+      <header class="heading">
+        <div>
+          <h1>Inputread 手柄控制</h1>
+          <p class="subtitle">朗读页快捷操作</p>
+        </div>
+        <button id="refresh" class="refresh" type="button" aria-label="刷新状态" title="刷新状态">↻</button>
+      </header>
+
+      <section class="status-card" aria-live="polite">
+        <span id="status-dot" class="status-dot"></span>
+        <div>
+          <div id="page-status" class="status-title">正在检查页面…</div>
+          <div id="gamepad-status" class="status-detail">—</div>
+          <div id="aloud-status" class="status-detail">—</div>
+        </div>
+      </section>
+
+      <section class="controls">
+        <h2>按键</h2>
+        <div class="control-grid">
+          <span>↑</span><span>暂停 / 继续</span>
+          <span>↓</span><span>重播当前朗读项</span>
+          <span>←</span><span>上一项</span>
+          <span>→</span><span>下一项</span>
+          <span>Y</span><span>暂停 / 继续</span>
+          <span>RB</span><span>打开单词解释框里的“看图片”</span>
+          <span>RB</span><span>在图片页按 RB 返回阅读页</span>
+          <span>B</span><span>关闭单词解释框</span>
+          <span>X</span><span>收藏解释框中的单词</span>
+          <span>A</span><span>在光标位置左击；空白处快速按两次朗读段落</span>
+          <span>左摇杆</span><span>移动网页光标</span>
+          <span>右摇杆</span><span>上下滚动页面（图片页同样可用）</span>
+        </div>
+      </section>
+
+      <footer>
+        <div id="last-action">最近操作：—</div>
+        <div id="keyboard-note" class="keyboard-note" hidden></div>
+        <div id="version-note" class="version-note">—</div>
+      </footer>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
